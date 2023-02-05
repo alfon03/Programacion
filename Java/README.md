@@ -1,1 +1,1 @@
-  <h1>Aqui encontraras todos mis ejrcicios de Java </h1>
+  <h1>Aqui encontraras todos mis ejercicios de Java </h1>
