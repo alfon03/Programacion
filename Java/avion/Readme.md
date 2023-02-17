@@ -53,4 +53,4 @@ A continuación se debe mostrar el siguiente menú:</h3>
     <dd>Salir</dd>
   </dt>
   
-<a href="https://drive.google.com/file/d/10hRqHXhe2XNCfCserv2jcT0d31MG0Tuf/view?usp=share_link"> Aqui encontraras un pdf con el ejercicio porsi lo quieres descargar</a>  
+<a href="https://drive.google.com/file/d/10hRqHXhe2XNCfCserv2jcT0d31MG0Tuf/view?usp=share_link"> Aqui encontraras un pdf con el ejercicio por si lo quieres descargar</a>  
