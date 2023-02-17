@@ -50,4 +50,4 @@ A continuación se debe mostrar el siguiente menú:</h3>
     <dd>Salir</dd>
   </dt>
   
-<iframe src="[files/husky.pdf](https://drive.google.com/file/d/10hRqHXhe2XNCfCserv2jcT0d31MG0Tuf/view?usp=share_link)" height="100%" width="100%"></iframe>  
+<iframe src="https://drive.google.com/file/d/10hRqHXhe2XNCfCserv2jcT0d31MG0Tuf/view?usp=share_link" height="100%" width="100%"></iframe>  
