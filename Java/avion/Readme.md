@@ -1,6 +1,7 @@
 <h1>Este es el ejercicio</h1>
 <br>
 <hr size="5">
+<img src="https://drive.google.com/file/d/1kXd-7bTPhtXB1QgKJxPB_WpSl3ZkDka1/view?usp=share_link" talt="imagen">
 <p>Cuando se creen los objetos de la clase avión se supondrá que “salen de fábrica” por lo que no han
 realizado ningún vuelo ni tienen ningún kilómetro volado.
 Se deberán crear los getter y setter de todos los campos, pero hay que tener en cuenta que la
