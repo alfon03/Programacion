@@ -3,7 +3,7 @@ package MockExam2;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public abstract class Publicacion implements Valorable,Comparable<Publicacion>{
+public abstract class Publicacion implements Valorable, Comparable<Publicacion> {
 
 	protected String texto;
 	private LocalDateTime fechaCreacion;
@@ -11,19 +11,19 @@ public abstract class Publicacion implements Valorable,Comparable<Publicacion>{
 	private int codigo;
 	private static int codigoSiguiente;
 	private Usuario usuario;
-	
+
 	public Publicacion(String texto, Usuario usuario) throws PublicacionesException {
 		super();
 		setTexto(texto);
 		this.usuario = usuario;
-		this.codigoSiguiente ++;
+		this.codigoSiguiente++;
 		this.fechaCreacion = LocalDateTime.now();
 	}
-	
+
 	protected String getTexto() {
 		return this.getTexto();
 	}
-	
+
 	protected abstract void setTexto(String texto) throws PublicacionesException;
 
 	@Override
@@ -41,15 +41,15 @@ public abstract class Publicacion implements Valorable,Comparable<Publicacion>{
 		if (getClass() != obj.getClass())
 			resultado = false;
 		Publicacion other = (Publicacion) obj;
-		return resultado && codigoSiguiente == other.codigoSiguiente && Objects.equals(fechaCreacion, other.fechaCreacion)
-				&& Objects.equals(texto, other.texto) && Objects.equals(usuario, other.usuario)
-				&& valoracion == other.valoracion;
+		return resultado && codigoSiguiente == other.codigoSiguiente
+				&& Objects.equals(fechaCreacion, other.fechaCreacion) && Objects.equals(texto, other.texto)
+				&& Objects.equals(usuario, other.usuario) && valoracion == other.valoracion;
 	}
-	
+
 	public LocalDateTime getFechaCreacion() {
 		return this.fechaCreacion;
 	}
-	
+
 	public int getValoracion() {
 		return this.valoracion;
 	}
@@ -59,40 +59,37 @@ public abstract class Publicacion implements Valorable,Comparable<Publicacion>{
 		boolean resultado = false;
 		try {
 			Valoraciones v = Valoraciones.valueOf(valoracion.toUpperCase());
-			this.valoracion+=v.getValoracion();
+			this.valoracion += v.getValoracion();
 			resultado = true;
-		}catch(Exception e) {
-			
+		} catch (Exception e) {
+
 		}
 		return resultado;
 	}
-	
+
 	public int getCodigo() {
 		return this.codigo;
 	}
-	
+
 	public String getLoginUsuario() {
 		return this.usuario.getLogin();
 	}
 
 	@Override
 	public String toString() {
-		return String.format("%s"
-				+ "\nPublicación: %s\r\n"
-				+ "Realizada por: %s\r\n"
-				+ "Valoración: %s\r\n"
-				+ "Fecha de publicación: %s", getClass().getSimpleName(),this.texto,getLoginUsuario(),getValoracion(),getFechaCreacion());
+		return String.format(
+				"%s" + "\nPublicación: %s\r\n" + "Realizada por: %s\r\n" + "Valoración: %s\r\n"
+						+ "Fecha de publicación: %s",
+				getClass().getSimpleName(), this.texto, getLoginUsuario(), getValoracion(), getFechaCreacion());
 	}
 
 	@Override
 	public int compareTo(Publicacion o) {
 		return this.fechaCreacion.compareTo(o.getFechaCreacion());
 	}
-	
-	
+
 	public boolean isAnterior(Publicacion publicacion) {
 		return this.fechaCreacion.compareTo(publicacion.getFechaCreacion()) > 0;
 	}
-	
 
 }
